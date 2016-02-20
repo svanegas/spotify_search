@@ -3,6 +3,9 @@ package com.svanegas.spotifysearch.app;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+/**
+ * Taken from: https://gist.github.com/ssinss/e06f12ef66c51252563e
+ */
 public abstract class LoadMoreScrollListener extends RecyclerView.OnScrollListener {
   public static String TAG = LoadMoreScrollListener.class.getSimpleName();
 
