@@ -3,4 +3,21 @@
 
   <string name="hello_world">Hello world!</string>
   <string name="action_settings">Settings</string>
+
+  <string name="welcome">Welcome to Spotify Search! Please write an artist name you want to find and press the \'search\' button to see all the available albums</string>
+  <string name="search_hint">Favorite artist</string>
+  <string name="search_button">Search</string>
+  <string name="searching">Searching artist...</string>
+  <string name="title_activity_artist">ArtistActivity</string>
+  <string name="no_results">No results found</string>
+  <string name="generic_error">An unexpected error occurred</string>
+  <string name="could_not_process_request">We couldn\'t process your request</string>
+  <string name="popularity">Popularity</string>
+  <string name="followers">Followers</string>
+  <string name="thousands_followers">%1$.1fk</string>
+  <string name="millions_followers">%1$.2fm</string>
+
+  <string name="no_available_countries">Not available in any country</string>
+  <string name="available_in">Available in:</string>
+  <string name="x_countries">%1$d countries</string>
 </resources>

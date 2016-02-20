@@ -1,0 +1,111 @@
+<!--
+android.support.design.widget.CoordinatorLayout
+FrameLayout
+-->
+<android.support.design.widget.CoordinatorLayout
+  android:id="@+id/coordinator_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ArtistActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/toolbar"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/artist_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popularity"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+              <TextView
+                android:id="@+id/popularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/textColorSecondary"
+                android:textStyle="italic"
+                android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/followers"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+              <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/textColorSecondary"
+                android:textStyle="italic"
+                android:singleLine="true"/>
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+
+      <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+    </LinearLayout>
+
+  </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,16 +1,69 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+<!--
+android.support.design.widget.CoordinatorLayout
+FrameLayout
+-->
+<android.support.design.widget.CoordinatorLayout
+  android:id="@+id/coordinator_layout"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
 
-  <TextView
-    android:text="@string/hello_world"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</RelativeLayout>
+    <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/toolbar"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/brand"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/welcome"
+          android:textColor="@color/textColorSecondary"/>
+
+        <android.support.design.widget.TextInputLayout
+          android:layout_marginTop="15dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <EditText
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_hint"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+          android:id="@+id/search_button"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:text="@string/search_button"
+          android:textColor="@color/textColorInverse"
+          android:theme="@style/AppTheme.Button"/>
+      </LinearLayout>
+    </LinearLayout>
+  </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
